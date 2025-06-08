@@ -1,0 +1,45 @@
+/*
+Theme Name: Header Pixel Theme
+Theme URI: http://.com
+Author: Rubén
+Description: Tema base para la prueba técnica del header.
+Version: 1.0
+*/
+
+
+.Navbar {
+  background-color: #000000;
+  padding: 0px;
+  margin: 0px;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+  }
+
+  &__logo img {
+    height: 40px;
+  }
+
+//   &__nav {}
+
+  &__menu {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+
+    li {
+      a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+
+        &:hover {
+          color: #0073aa;
+        }
+      }
+    }
+  }
+}
