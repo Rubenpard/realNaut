@@ -4,6 +4,12 @@
   }
 }
 
+@mixin mq-max($breakpoint) {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}
+
 @mixin transition($prop, $time, $ease: ease-in-out) {
   transition: #{$prop} #{$time} #{$ease};
 }

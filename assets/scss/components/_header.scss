@@ -1,10 +1,23 @@
+@use "../utils/variables" as vars;
+@use "../utils/mixins" as mixins;
+@use "../base/reset";
+@use "../base/typography";
+@use "../layout/navigation";
+
 .header {
-  background: #111;
-  color: #fff;
+  background: vars.$color-black;
+  color: vars.$color-white;
   border-bottom: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100000;
+  gap: 24px;
+  display:flexbox;
+  justify-content: center;
 
   &__container {
-    max-width: 1200px;
+    max-width: vars.$container-width;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -23,14 +36,14 @@
     align-items: center;
 
     img {
-      height: 32.56px;
-      width: 148px;
+      height: vars.$logo-height;
+      width: vars.$logo-width;
       margin-right: 12px;
     }
 
     &-text {
       font-weight: bold;
-      font-size: 1.2rem;
+      font-size: vars.$font-large;
       letter-spacing: 1px;
     }
   }
@@ -54,11 +67,12 @@
       li {
         cursor: pointer;
         position: relative;
-        padding: 22px 0;
+        padding: 36px 0 36px 0;
         border-bottom: 4px solid transparent;
+        font-size: vars.$font-large;
 
         &:hover {
-          border-bottom-color: #FFC72C;
+          border-bottom-color: vars.$color-main;
         }
 
         ul {
@@ -66,8 +80,8 @@
           list-style: none;
           padding-left: 0;
           margin: 0;
-          background: var(--Grises-grey-black, #303030);
-          top: 111px;
+          background: var(--Grises-grey-black, vars.$color-grey-dark);
+          top: 101px;
           left: 0;
           z-index: 100;
           position: fixed;
@@ -76,20 +90,20 @@
 
           li {
             flex: 1;
-            padding-left: 1rem;
+            padding-left: vars.$font-medium;
             background-color: rgba(255, 255, 255, 0.05);
             border-radius: 8px;
             padding: 16px;
             white-space: nowrap;
 
             &:hover {
-              transition: background-color 1s ease;
-              background-color: #FFC72C;
+              @include mixins.transition(background-color, 1s, ease);
+              background-color: vars.$color-main;
               border-bottom: none;
 
               a {
-                transition: color 1s ease;
-                color: #010741;
+                 @include mixins.transition(color, 1s, ease);
+                color: vars.$color-blue-dark;
               }
             }
           }
@@ -118,24 +132,24 @@
       position: fixed;
       top: 0;
       left: 0;
-      width: 75vw; /* tamaño del menú lateral en móvil/tablet */
+      width: vars.$menu-width-mobile;
       height: 100vh;
-      background-color: #111;
+      background-color: vars.$color-black;
       padding: 60px 24px 24px 24px;
       gap: 0;
       z-index: 150;
       overflow-y: auto;
-      transition: transform 0.3s ease-in-out;
+       @include mixins.transition(transform, 0.3s, ease-in-out);
       box-shadow: 2px 0 8px rgba(0,0,0,0.7);
     }
 
     &-item {
       a {
-        color: #fff;
+        color: vars.$color-white;
         text-decoration: none;
-        font-size: 1rem;
+        font-size: vars.$font-medium;
         padding: 8px 0;
-        transition: color 0.2s;
+        @include mixins.transition(color, 0.2s);
 
         &:hover {
           color: #ffd600;
@@ -149,21 +163,20 @@
     align-items: center;
     gap: 32px;
     padding-left: 32px;
-    min-height: 40px;
   }
 
   &__icon-link {
     display: flex;
     align-items: center;
     gap: 8px;
-    color: #fff;
+    color: vars.$color-white;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: vars.$font-medium;
 
     svg {
       width: 18px;
       height: 18px;
-      fill: #fff;
+      fill: vars.$color-white;
     }
 
     &:hover {
@@ -172,16 +185,17 @@
   }
 
   &__unir {
-    color: #fff;
+    color: vars.$color-white;
     border-left: 1px solid white;
     padding: 24px 0 24px 16px;
     display: flex;
     align-items: center;
     gap: 6px;
+    height: 54px;
 
     span {
       font-weight: 500;
-      font-size: 0.8rem;
+      font-size: vars.$font-small;
     }
   }
 
@@ -198,7 +212,7 @@
     padding: 0;
     font-size: 2rem;
     line-height: 1;
-    color: #ffd600;
+    color: vars.$color-white;
     user-select: none;
   }
 
@@ -231,11 +245,11 @@
     position: absolute;
     width: 12px;
     height: 2px;
-    background-color: #FFC72C;
+    background-color: vars.$color-main;
     top: 50%;
     left: 0;
     transform-origin: left center;
-    transition: transform 0.3s ease;
+    @include mixins.transition(transform, 0.3s, ease);
   }
 
 
@@ -261,16 +275,23 @@
     top: -4px;
   }
 
+  
+  &--scrolled {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
 
-  @media (max-width: 900px) {
+  @include mixins.mq-max(900px) {
     & {
       display: flex;
-      border-bottom: 3px solid #FFC72C;
+      border-bottom: 3px solid vars.$color-main;
+      height: 64px;
     }
 
     &__container {
       width: 100%;
       padding: 5px;
+      padding: 16px 18px 16px 18px;
     }
 
     &__left {
@@ -287,11 +308,11 @@
 
       &-list {
         display: none;
-        margin: 96px 0 0 0;
+        margin:67px 0 0 0;
         width: 100%;
 
         li {
-          border: 1px solid #4E4E4E;
+          border: 1px solid vars.$color-grey-border;
           padding: 16px 0;
      
           &:hover > ul {  
@@ -321,6 +342,10 @@
          justify-content: space-between;
          padding: 0px 16px 0px 16px;
         }
+
+      i{
+        font-size: vars.$font-large;
+      }
       }
    
       &-list--open {
@@ -334,8 +359,19 @@
     }
 
     &__burger {
-      display: flex; /* mostrar burger en móvil/tablet */
+      display: flex;
     }
+
+    img.wp-smiley,
+    img.emoji {
+      height: 2em;
+      width: auto;
+      margin: 0 0.2em;
+      vertical-align: middle;
+      filter: invert(86%) sepia(68%) saturate(2500%) hue-rotate(2deg) brightness(100%) contrast(80%);
+    }
+
+    
     &__right--open {
       display: flex;
       flex-direction: column;
@@ -345,7 +381,7 @@
       bottom: 0;
       height: auto;
       z-index: 900;
-      width: 75vw;
+      width: vars.$menu-width-mobile;
     }
   
     &__unir {
@@ -364,4 +400,6 @@
   }
 
 }
+
+
 

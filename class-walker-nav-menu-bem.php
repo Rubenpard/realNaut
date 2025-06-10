@@ -36,8 +36,14 @@ class Walker_Nav_Menu_BEM extends Walker_Nav_Menu {
 
         $item_output  = $before;
 
-        // Aquí abrimos el div flex container
+        // Abrimos el div flex container
         $item_output .= '<div class="header__menu-item-inner">';
+
+        // Mostrar imagen de ACF si existe
+        $icon = $this->get_menu_item_icon($item);
+        if ($icon) {
+            $item_output .= $icon . ' ';
+        }
 
         $item_output .= '<a' . $attributes . '>' . $link_before . $title . $link_after . '</a>';
 
@@ -52,6 +58,24 @@ class Walker_Nav_Menu_BEM extends Walker_Nav_Menu {
         $item_output .= $after;
 
         $output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args);
+    }
+
+protected function get_menu_item_icon($item) {
+    if (!function_exists('get_field')) return '';
+    $post_id = 'menu_item_' . $item->ID;
+
+    $icon_type = get_field('menu_icon_type', $post_id);
+
+    if ($icon_type === 'fontawesome') {
+        $icon_class = get_field('menu_fontawesome', $post_id);
+        return $icon_class ? '<i class="' . esc_attr($icon_class) . '"></i>' : '';
+    } elseif ($icon_type === 'custom') {
+        $icon = get_field('menu_custom_icon', $post_id);
+        if ($icon && isset($icon['url'])) {
+            return '<img src="' . esc_url($icon['url']) . '" alt="' . esc_attr($icon['alt'] ?? '') . '" class="menu-custom-icon" />';
+        }
+    }
+    return '';
     }
 
 }
