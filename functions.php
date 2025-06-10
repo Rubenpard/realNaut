@@ -254,7 +254,7 @@ add_action('after_setup_theme', function() {
 add_filter('nav_menu_description', 'wp_kses_post');
 
 function theme_assets() {
-    wp_enqueue_style('theme-style', get_template_directory_uri() . 'style.css');
+    wp_enqueue_style('theme-style', get_template_directory_uri() . '/style.css');
     wp_enqueue_script('theme-js', get_template_directory_uri() . '/assets/js/main.js', [], false, true);
 }
 add_action('wp_enqueue_scripts', 'theme_assets');
