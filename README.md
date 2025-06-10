@@ -17,7 +17,14 @@ git clone https://github.com/Rubenpard/realNaut.git
 ## Parte técnica
 
 La prueba se ha realizado en un entorno local. Se ha elaborado un header responsive con adaptación a laptop y y resolucion de 900px. 
-Cuenta con dos menús editables desde wordpress con despliegue y dos imagenes   
+Cuenta con dos menús editables desde MENÚS en wordpress y dos imagenes que se cargan desde la libreria de imagenes. 
+> Para una correcta visulización cargar la imagenes en la libreria,  las imagenes estan en realNaut/assets/img/.
+> Despues cargar las imagenes:
+    
+  >  - logo-kscholl en Personalizar > identidad del sitio
+   > - unir_blanco Personalizar > imagen Unir
+
+        
 
 SCSS modular, uso de variables y estructura.
 
