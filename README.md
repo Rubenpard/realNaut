@@ -8,15 +8,26 @@ Este proyecto es una prueba técnica desarrollada por Rubén Martínez, que mues
 2. Ejecuta los siguientes comandos:
 
 cd \wp-content\themes
+
 git init
+
 git clone https://github.com/Rubenpard/realNaut.git
 
 
-## Parte técnica CSS
+## Parte técnica
 
-Diseño mobile-first con Tailwind CSS. He utilizado esta herramienta para garantizar un diseño responsive, asegurando que la interfaz de usuario se ajuste a distintos tamaños de pantalla sin necesidad de escribir código CSS adicional.
+La prueba se ha realizado en un entorno local. Se ha elaborado un header responsive con adaptación a laptop y y resolucion de 900px. 
+Cuenta con dos menús editables desde wordpress con despliegue y dos imagenes   
 
-El proyecto no utiliza Sass ni ninguna otra metodología CSS adicional. Toda la personalización de estilos se hace directamente con Tailwind y sus utilidades para margenes, espaciados, tipografía y colores.
+SCSS modular, uso de variables y estructura.
+
+Nomenclatura BEM.
+
+Menú responsive (desktop + móvil con toggle).
+
+Submenús multinivel con interacción JS.
+
+Accesibilidad (roles ARIA, navegación con teclado, etc.).
 
 ## Parte técnica JavaScript y Frameworks
 
