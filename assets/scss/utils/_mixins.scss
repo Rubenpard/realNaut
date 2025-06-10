@@ -1,0 +1,10 @@
+@mixin mq($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin transition($prop, $time, $ease: ease-in-out) {
+  transition: #{$prop} #{$time} #{$ease};
+}
+
