@@ -1,6 +1,6 @@
-# Prueba técnica Rubén Martinez
+# Prueba técnica Rubén Martínez
 
-Este proyecto es una prueba técnica desarrollada por Rubén Martínez, que muestra un de un header para un theme de wordpress.
+Este proyecto es una prueba técnica desarrollada por Rubén Martínez, que muestra un header para un theme de wordpress.
 
 ## Instalación
 
@@ -16,17 +16,17 @@ git clone https://github.com/Rubenpard/realNaut.git
 
 ## Parte técnica
 
-La prueba se ha realizado en un entorno local. Se ha elaborado un header responsive con adaptación a laptop y y resolucion de 900px. 
-Cuenta con dos menús editables desde MENÚS en wordpress y dos imagenes que se cargan desde la libreria de imagenes. 
-> Para una correcta visulización cargar la imagenes en la libreria,  las imagenes estan en realNaut/assets/img/.
-> Despues cargar las imagenes:
+La prueba se ha realizado en un entorno local. Se ha elaborado un header responsive con adaptación a laptop y resolucion de 900px. 
+Cuenta con dos menús editables desde MENÚS en wordpress y dos imágenes que se cargan desde la librería de imágenes. 
+> Para una correcta visualización cargar la imágenes en la librería,  las imágenes están en realNaut/assets/img/.
+> Después cargar las imágenes:
   >   
   >  - logo-kscholl en Personalizar > identidad del sitio
    > - unir_blanco Personalizar > imagen Unir
 
-Tambien cuenta con la seleción de iconos o imagenes para los items de los menus de navegación. 
-Los links de la barra de navegación cuentan con submenus .Se despliegan al pasar el rartón por encima en el laptop y en tablets y movil al pulsar en los iconos de flecha.
-en vesion tablet y movil la navegación se abren desde un menú hamburguesa y funciona como un acordeon.        
+También cuenta con la selección de iconos o imágenes para los ítems de los menús de navegación. 
+Los links de la barra de navegación cuentan con submenus. Se despliegan al pasar el ratón por encima en el laptop y en tablets y móvil al pulsar en los iconos de flecha.
+En versión tablet y móvil la navegación se abren desde un menú hamburguésa y funciona como un acordeón.        
 
 Sistema ITCSS para gestión de estilos y escabilidad.
 
@@ -45,4 +45,3 @@ Empaquetado en GULP
 
 
 Muchas gracias por tu tiempo, te deseo un buen día
-
