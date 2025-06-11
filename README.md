@@ -17,7 +17,7 @@ git clone https://github.com/Rubenpard/realNaut.git
 
 cd realNaut
 
-4. E intalmos dependencias 
+4. E instalamos dependencias 
 
 npm install 
 
