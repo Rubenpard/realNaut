@@ -13,6 +13,15 @@ git init
 
 git clone https://github.com/Rubenpard/realNaut.git
 
+accedemos a la carpeta del proyecto por terminal
+
+cd realNaut
+
+E intalmos dependencias 
+
+npm install 
+
+
 
 ## Parte técnica
 
