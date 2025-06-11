@@ -13,11 +13,11 @@ git init
 
 git clone https://github.com/Rubenpard/realNaut.git
 
-accedemos a la carpeta del proyecto por terminal
+3. accedemos a la carpeta del proyecto por terminal
 
 cd realNaut
 
-E intalmos dependencias 
+4. E intalmos dependencias 
 
 npm install 
 
