@@ -33,7 +33,7 @@ Cuenta con dos menús editables desde MENÚS en wordpress y dos imágenes que se
   >  - logo-kscholl en Personalizar > identidad del sitio
    > - unir_blanco Personalizar > imagen Unir
 
-También cuenta con la selección de iconos o imágenes para los ítems de los menús de navegación. 
+También cuenta con la selección de iconos o imágenes para los ítems de los menús de navegación ( necesario plugin ACF). 
 Los links de la barra de navegación cuentan con submenus. Se despliegan al pasar el ratón por encima en el laptop y en tablets y móvil al pulsar en los iconos de flecha.
 En versión tablet y móvil la navegación se abren desde un menú hamburguésa y funciona como un acordeón.        
 
